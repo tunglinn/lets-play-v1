@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Video Marker — Prototype</title>
+  <link rel="canonical" href="https://https://tunglinn.github.io/lets-play-v1/" />
+  <link rel="manifest" href="/lets-play-v1/manifest.webmanifest">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <h2>Let's Play (v1)</h2>
+</header>
+
+
+
+<script>
+    if (navigator.serviceWorker) {
+      navigator.serviceWorker.register (
+        '/lets-play-v1/sw.js',
+        {scope: '/lets-play-v1/'}
+      )
+    }
+</script>
+
+</body>
+</html>
