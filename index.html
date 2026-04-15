@@ -3,26 +3,46 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Video Marker — Prototype</title>
-  <link rel="canonical" href="https://https://tunglinn.github.io/lets-play-v1/" />
-  <link rel="manifest" href="/lets-play-v1/manifest.webmanifest">
+  <title>Let's Play V1</title>
+  <!-- <link rel="canonical" href="https://https://tunglinn.github.io/lets-play-v1/" />
+  <link rel="manifest" href="/lets-play-v1/manifest.webmanifest"> -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-  <h2>Let's Play (v1)</h2>
-</header>
+  <div class="bg-blob blob-1"></div>
+  <div class="bg-blob blob-2"></div>
+ 
+  <main class="card">
+    <div class="emoji">🎲</div>
+    <h1 class="title">Who are you?</h1>
+    <p class="subtitle">Pick your name to get started.</p>
+ 
+    <div class="select-wrapper">
+      <select id="player-select">
+        <option value="" disabled selected>Loading players…</option>
+      </select>
+      <span class="select-arrow">↓</span>
+    </div>
+ 
+    <button id="play-btn" class="play-btn" disabled>
+      Let's play!
+    </button>
+ 
+    <p id="error-msg" class="error-msg"></p>
+  </main>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="js/script.js"></script>
+</body>
 
-
-
-<script>
+<!-- <script>
     if (navigator.serviceWorker) {
       navigator.serviceWorker.register (
         '/lets-play-v1/sw.js',
         {scope: '/lets-play-v1/'}
       )
     }
-</script>
+</script> -->
 
 </body>
 </html>
